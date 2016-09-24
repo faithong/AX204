@@ -58,22 +58,32 @@ ctx3.stroke();
 ctx3.fillStyle = "yellow";
 ctx3.fill();
 
+
 ctx3.beginPath()
-ctx3,moveTo(300,500);
-ctx3.lineTo(350,350);
-ctx3.lineTo(400,350);
-ctx3.lineTo(450,500);
+ctx3.moveTo(552,200);
+ctx3.lineTo(545,200);
+ctx3.lineTo(500,250);
+ctx3.lineTo(600,250);
 ctx3.fillStyle ="grey";
 ctx3.fill();
 ctx3.stroke();
 ctx3.closePath();
 
-ctx3.moveTo(375,500);
-ctx3.strokeStyle();
-ctx3.lineTo(375,350);
-ctx3.stroke();
+ctx3.fillRect(500,250,100,100)
+ctx3.clearRect(515,270,20,20)
+ctx3.clearRect(560,270,20,20)
+ctx3.clearRect(538,320,20,30)
+ctx3.fillStyle ="red";
+ctx3.fill()
+ctx3.stroke()
+ctx3.closePath()
 
-
+ctx3.beginPath()
+ctx3.moveTo(538,320)
+ctx3.lineTo(538,538)
+ctx3.lineTo(538,538)
+ctx3.stroke()
+ctx3.closePath()
 
 
 
