@@ -1,7 +1,7 @@
 console.log("working");
 
 var game = new Phaser.Game(800, 600, Phaser.AUTO, '', {preload:preload, create:create, update:update});
-var score = 0
+var score = 0;
 var life = 3;
 
 function preload() {
@@ -79,10 +79,10 @@ function update() {
 
 	// enemy AI
 	if (enemy1.x > 759){
-		enemy1.body.velocity.x = -120
+		enemy1.body.velocity.x = -120;
 		enemy1.animations.play('left');
 	} else if (enemy1.x < 405) {
-		enemy1.body.velocity.x = 120
+		enemy1.body.velocity.x = 120;
 		enemy1.animations.play('right');
 	}
 }
