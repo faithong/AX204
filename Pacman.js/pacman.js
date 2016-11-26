@@ -71,7 +71,7 @@ function draw() {
  	drawGhost();
  	circle(circleX, circleY);
  	// Tells our sprite to bounce off the walls and go in the opposite direction
- 	if (x + mx > WIDTH - r || x + mx < 0 + r){
+ 	if (x + mx > WIDTH - r || x + mx < 0 ){
  		mx = -mx
  	} else if (y + my > WIDTH - r || y + my < 0 + r) {
  		my = -my
