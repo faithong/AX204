@@ -28,7 +28,7 @@ function create() {
 	//ledges
 	var ledge = platforms.create(400, 400, 'ground');
 	ledge.body.immovable = true;
-	ledge = platforms.create(500, 250, 'ground');
+	ledge = platforms.create(150, 500, 'ground');
 	ledge.body.immovable = true;
 
 	//Player 
@@ -95,7 +95,7 @@ function create() {
 	//Set up keyboard events
 		cursors = game.input.keyboard.createCursorKeys();
 
-}
+	}
 
 
 function update() {
