@@ -161,7 +161,7 @@ function update() {
 // Define collectStar
 function collectStar (player, star){
 	star.kill();
-	score + 1; //score++
+	score = score + 1; //score++
 	scoretext.setText(score);
 	// create new star
 	star = stars.create(Math.floor(Math.random() * 750), 0, 'star');
