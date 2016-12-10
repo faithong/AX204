@@ -63,7 +63,7 @@ function create() {
 		enemy2.body.gravity.y = 500;
 		enemy2.body.collideWorldBounds = true;
 
-	enemy3 = game.add.sprite(200, 20, 'baddie'); // highlight something and press command d to highlight everything after
+	enemy3 = game.add.sprite(760, 20, 'baddie'); // highlight something and press command d to highlight everything after
 		// animate sprite
 		enemy3.animations.add('left', [0,1], 10, true);
 		enemy3.animations.add('right', [2,3], 10, true);
