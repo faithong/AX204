@@ -31,8 +31,6 @@ function create() {
 	ledge = platforms.create(150, 250, 'ground');
 	ledge.body.immovable = true;
 
-}
-
 	//Player 
 	player = game.add.sprite(32, 400, 'dude');
 		// animate sprite
@@ -96,6 +94,8 @@ function create() {
 		scoretext.setTextBounds(0, 520, 800, 100);
 	//Set up keyboard events
 		cursors = game.input.keyboard.createCursorKeys();
+
+}
 
 
 function update() {
