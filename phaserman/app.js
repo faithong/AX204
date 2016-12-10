@@ -1,15 +1,14 @@
 console.log("working");
 
-var game = new Phaser.Game(800, 600, Phaser.AUTO, '', {preload:preload, create:create, update:update});
+var game = new Phaser.Game(800, 600, Phaser.AUTO, '', {preload:preload, create:create, update:update });
 var score = 0;
-var life = 3;
 
 function preload() {
 	game.load.image('sky','assets/sky.png');
 	game.load.image('ground','assets/platform.png');
 	game.load.image('star','assets/star.png');
 	game.load.spritesheet('dude','assets/dude.png', 32, 48);
-	game.load.spritesheet('assets/baddie.png', 32, 32); //always tell how tall and wide each frame is for spritesheets
+	game.load.spritesheet('baddie', 'assets/baddie.png', 32, 32); //always tell how tall and wide each frame is for spritesheets
 }
 
 function create() {
@@ -31,6 +30,8 @@ function create() {
 	ledge.body.immovable = true;
 	ledge = platforms.create(150, 250, 'ground');
 	ledge.body.immovable = true;
+
+}
 
 	//Player 
 	player = game.add.sprite(32, 400, 'dude');
@@ -89,13 +90,13 @@ function create() {
 		// Create and position text
 		scorelabel = game.add.text(-60, 0, "Your Score is: ", style);
 		scoretext = game.add.text(70, 0, score, style);
-		scorelabel.setShadow(3,3, 'rgba(0,0,0,0.5)', 2)
-		scoretext.setShadow(3,3, 'rgba(0,0,0,0.5)', 2)
+		scorelabel.setShadow(3,3, 'rgba(0,0,0,0.5)', 2);
+		scoretext.setShadow(3,3, 'rgba(0,0,0,0.5)', 2);
 		scorelabel.setTextBounds(0, 520, 800, 100);
 		scoretext.setTextBounds(0, 520, 800, 100);
 	//Set up keyboard events
 		cursors = game.input.keyboard.createCursorKeys();
-}
+
 
 function update() {
 	// Collision for player or the enemy and the platforms
@@ -117,6 +118,11 @@ function update() {
 		// When player sprite stops
 		player.animations.stop();
 		player.frame = 4;
+	}
+
+	//Adding Jump 
+	if (cursors.up.isDown && player.body.touching.down) {
+		player.body.velocity.y = -300;
 	}
 
 	// enemy AI
@@ -176,6 +182,11 @@ function losePointLeft (player, enemy) {
 	scoretext.setText(score);
 	enemy.reset(10, 20);
 }
+
+
+
+
+
 
 
 
